@@ -1,5 +1,5 @@
 from helpers import web_element
-from page_objects import snowboard
+from page_objects import snbd_categories
 from selenium.webdriver.common.keys import Keys
 
 
@@ -22,7 +22,7 @@ class Home(web_element.Base):
     def search_item(self):
         self.return_element(search).send_keys("snowboard")
         self.return_element(srch_btn).send_keys(Keys.ENTER)
-        return snowboard.Snowboard(self)
+        return snbd_categories.Snowboard(self)
 
 
 
